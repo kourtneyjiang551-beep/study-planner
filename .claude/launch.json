@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "study-planner-dev",
+      "runtimeExecutable": "/Users/wangfuliang/.nvm/versions/node/v22.17.0/bin/node",
+      "runtimeArgs": ["node_modules/.bin/next", "dev"],
+      "port": 3000,
+      "autoPort": true,
+      "env": {
+        "PATH": "/Users/wangfuliang/.nvm/versions/node/v22.17.0/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    }
+  ]
+}

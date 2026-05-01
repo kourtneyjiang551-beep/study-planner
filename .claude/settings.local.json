@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(chmod +x /Users/wangfuliang/Desktop/vibe-coding/study-planner/scripts/dev.sh)",
+      "Bash(export PATH=\"/Users/wangfuliang/.nvm/versions/node/v22.17.0/bin:$PATH\")",
+      "Bash(npx next:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3456/dashboard)",
+      "Bash(curl -s http://localhost:3456/dashboard)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(python3:*)",
+      "Bash(npx vercel:*)",
+      "Bash(npm run:*)",
+      "Bash(npm test:*)",
+      "Bash(npx tsc *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}

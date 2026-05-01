@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/* 主题 CSS 变量 — 默认星球探索主题（阻塞脚本会在解析前覆盖） */
+:root {
+  --bg-primary: #FAFAF5;
+  --bg-secondary: #F5F0E8;
+  --bg-card: #FFFFFF;
+  --text-primary: #1C1917;
+  --text-secondary: #991B1B;
+  --accent-1: #DC2626;
+  --accent-2: #D97706;
+  --accent-3: #16A34A;
+  --accent-4: #92400E;
+  --accent-5: #78716C;
+  --border: rgba(213, 200, 183, 0.5);
+  --font-display: 'ZCOOL KuaiLe', cursive, system-ui;
+  --font-body: system-ui, -apple-system, sans-serif;
+}
+
+@theme inline {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-card: var(--bg-card);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-1: var(--accent-1);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+  --color-accent-4: var(--accent-4);
+  --color-accent-5: var(--accent-5);
+  --color-border-theme: var(--border);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+/* 页面内容淡入 — 配合 ThemeProvider mounted 状态 */
+@keyframes themeReady {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.theme-ready {
+  animation: themeReady 150ms ease-out;
+}
+
+/* 隐藏滚动条 */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* 礼花筒效果通过 Canvas 实现，无需 CSS keyframes */
+
+/* Modal 动画 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; scale: 0.95; }
+  to { opacity: 1; scale: 1; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
