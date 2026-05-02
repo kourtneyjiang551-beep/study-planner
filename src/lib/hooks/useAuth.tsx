@@ -56,7 +56,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (error) return { error: error.message };
     // Supabase 开启邮箱验证时，重复邮箱不报错但 identities 为空数组
     if (data.user && data.user.identities?.length === 0) {
-      return { error: '该邮箱已被注册' };
+      return { error: '该邮箱已注册过，请前往邮箱查看验证邮件。如果未收到，可在登录页点击"忘记密码"重设' };
     }
     return { error: null };
   }, [supabase.auth]);
