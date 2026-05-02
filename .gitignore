@@ -50,3 +50,4 @@ playwright-report/
 # history
 .history
 .vercel
+*.docx
